@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: ./
+    ports:
+      - 8080:80
+      - 8443:443
+    volumes:
+      #- /home/debian/cert/:/etc/ssl # dhparams file
+      #- /home/debian/cert/live:/etc/letsencrypt/live # current certificate
+      #- /home/debian/cert/archive:/etc/letsencrypt/archive # all certificates (symlinks from /
+      - ./letsencrypt:/etc/letsencrypt
