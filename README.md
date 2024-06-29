@@ -25,10 +25,16 @@ We need to execute this command to authenticate this domain for SSL. The [certbo
 ## Running the container 
 
 With our ports properly mapped to those exposed by the container
+
 ```bash
 ~/deploy-to-production$ docker compose up
 ~/deploy-to-production$ docker run 
 ```
+
+```bash
+~/deploy-to-production$ docker-compose --env-file /docker-env up -d
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
@@ -43,3 +49,24 @@ to discuss what you would like to change.
 [https://github.com/Einsteinish/docker-nginx-hello-world](https://github.com/Einsteinish/docker-nginx-hello-world)
 
 [https://linuxconfig.org/how-to-bind-a-rootless-container-to-a-privileged-port-on-linux](https://linuxconfig.org/how-to-bind-a-rootless-container-to-a-privileged-port-on-linux)
+
+
+
+<!-- #
+ #   Create a variable environment on Linux shell:
+
+    export TAG=0.1.2
+
+ #   Set variable inside docker-compose.yml
+
+    db:
+      image: "redis:${TAG}"
+
+#    Verify if value was replaced
+
+    docker-compose config
+
+
+    https://stackoverflow.com/questions/29377853/how-can-i-use-environment-variables-in-docker-compose
+ -->
+

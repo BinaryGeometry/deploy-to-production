@@ -6,6 +6,9 @@ services:
   nginx:
     build:
       context: ./nginx
+      args:
+          NGINXCONF: localhost.conf
+          #NGINXCONF: ${NGINXCONF}
     ports:
       - 8080:8000
       - 8443:443
@@ -13,6 +16,7 @@ services:
       - web
     volumes:
     - ./letsencrypt:/etc/letsencrypt
+    - ./selfsigned:/etc/selfsigned
     restart: "always"
 
   web:
