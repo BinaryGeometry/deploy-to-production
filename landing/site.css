@@ -1,0 +1,28 @@
+/*#path1 {
+}*/
+/*  color:#000000;fill:#000000;stroke-linejoin:round;-inkscape-stroke:none*/
+
+.pos-abs {
+ position:absolute;
+}
+
+.full-wide {
+	width:100%;
+}
+
+.snowbot-logo {
+  stroke-dasharray: 10;
+  width:700px;
+  height:700px;
+  animation: dash 5s linear;
+}
+
+aside a img {
+	max-height:100px;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 10000;
+  }
+}

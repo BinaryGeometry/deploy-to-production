@@ -1,6 +1,6 @@
 FROM nginx:mainline-alpine
 RUN rm /etc/nginx/conf.d/*
-ADD helloworld.conf /etc/nginx/conf.d/
+ADD nginx.conf /etc/nginx/conf.d/
 #COPY ../../cert/  /etc/letsencrypt/
 #mkdir ./certbort && mkdir ./certbort/work-dir && mkdir ./certbort/logs-dir && certbot certonly --standalone --http-01-port 80 -d 'effortlessactuality.co.uk' -m 'binarygeometry@gmail.com' --config-dir ./certbort --agree-tos --no-eff-email --work-dir ./certbort/work-dir --logs-dir ./certbort/logs-dir
 #COPY ~/cert/live/effortlessactuality.co.uk/fullchain.pem  /etc/ssl/fullchain.pem

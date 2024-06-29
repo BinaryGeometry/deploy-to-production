@@ -13,7 +13,6 @@ services:
       - web
     volumes:
     - ./letsencrypt:/etc/letsencrypt
-    - ./landing:/usr/share/nginx/html
     restart: "always"
 
   web:
